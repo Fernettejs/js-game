@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    width: 500px;
+    height: 800px;
+    border: 1px solid black;
+    position: relative;
+    overflow-y: hidden;
+
+    background-color: #cccccc;
+}
+
+#character {
+    height: 100px;
+    width: 50px;
+    background-color: blue;
+    position: absolute;
+    top: 600px;
+    right: 225px;
+    z-index: 10;
+}
+
+.animate {
+    animation: right 2s linear;
+}
+
+.rightMore {
+    left: 325px;
+}
+
+.leftMore {
+    left: 125px;
+}
+
+/* @keyframes right{
+    0%{left: 0px;}
+    10%{left: 50px;}
+    20%{left: 100px;}
+    30%{left: 150px;}
+    40%{left: 200px;}
+    50%{left: 250px;}
+    60%{left: 300px;}
+    70%{left: 350px;}
+    80%{left: 400px;}
+    90%{left: 450px;}
+    100%{left: 450px;}
+} */
+
+#block {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+    /* bottom: 840px; */
+    /* left: 300px; */
+    animation: block 2s infinite linear;
+}
+
+@keyframes block{
+    0%{bottom:840px;}
+    100%{bottom:0px;}
+}
+
+#dash {
+    height: 40px; 
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    /* bottom: 840px; */
+    left: 243px;
+    animation: dash 1s infinite linear;
+}
+
+@keyframes dash{
+    0%{bottom:840px;}
+    100%{bottom:0px;}
+}
