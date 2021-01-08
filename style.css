@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    margin: 0 auto;
+    background-color: black;
+}
+h1, h2 {
+    color: white;
+    padding: 20px;
+}
+
+#game {
+    width: 500px;
+    height: 700px;
+    border: 1px solid black;
+    position: relative;
+    overflow-y: hidden;
+    text-align: center;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #cccccc;
+}
+
+#character {
+    height: 170px;
+    width: 80px;
+    background-image: url("resources/images/vw-top.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;     
+    position: absolute;
+    top: 500px;
+    right: 215px;
+    z-index: 99;
+}
+
+.animate {
+    animation: right 2s linear;
+}
+
+.rightMore {
+    left: 325px;
+}
+
+.leftMore {
+    left: 100px;
+}
+
+#block {
+    height: 150px;
+    width: 100px;
+    background-image: url("resources/images/pothole.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;     
+    position: absolute;
+    /* bottom: 840px; */
+    /* left: 300px; */
+    animation: block 1s infinite linear;
+    animation-delay: .7s;
+    z-index: 10;
+
+}
+
+@keyframes block{
+    0%{bottom:840px;}
+    100%{bottom:-100px;}
+}
+
+#dash {
+    height: 60px; 
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    /* bottom: 840px; */
+    left: 243px;
+    animation: move 1s infinite linear;
+    animation-delay: -1s;
+}
+
+@keyframes move{
+    0%{bottom:940px;}
+    100%{bottom:0px;}
+}
+
+/* #start {
+    height: 50px; 
+    width: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 10px;
+    z-index: 99;
+} */
+
+#seconds-counter {
+    font-size: 20px;
+    bottom: 5px;
+    z-index: 99;
+
+}
